@@ -45,7 +45,7 @@ class Engineer:
 | **Backend & Microservices** | `Python`, `FastAPI`, `Node.js`, `Express.js`, `REST APIs`, `WebSockets / Socket.io`, `Pydantic v2` |
 | **Databases & Caching** | `SQLite (TTL Cache)`, `MongoDB`, `PostgreSQL`, `Redis` |
 | **Infrastructure & DevOps** | `Docker`, `Docker Compose`, `GitHub Actions (CI/CD)`, `Linux / Bash` |
-| **Core Foundations & DSA** | `Java`, `Data Structures & Algorithms (300+ LeetCode solves)`, `Distributed System Design` |
+| **Core Foundations & DSA** | `Java`, `Data Structures & Algorithms (1200+ LeetCode solves)`, `Distributed System Design` |
 
 </div>
 
@@ -53,20 +53,32 @@ class Engineer:
 
 ### 🚀 Flagship Systems & Architectures
 
-#### 1. [CP Tutor Agent](https://github.com/mihulbairagi/cp_tutor_agent) — Multi-Agent Competitive Programming Coach
+#### 1. [Aegis AI Gateway](https://github.com/mihulbairagi/aegis-ai-gateway) — High-Throughput Reverse Proxy & Semantic Cache
+> **FastAPI · FastEmbed (ONNX) · Circuit Breaker (Hystrix) · Sliding Token Bucket · 350+ RPS**
+* **Two-Tier Caching:** $O(1)$ LRU exact match (<0.05ms) + FastEmbed dense semantic cache (`all-MiniLM-L6-v2`, <10ms on CPU) achieving >85% cosine similarity on paraphrased queries.
+* **Production Resilience:** 3-state Circuit Breaker (`CLOSED`/`OPEN`/`HALF_OPEN`) with automated failover and RFC 6585 sliding token-bucket rate limiter.
+* **Dual-Tier Observability:** Distinguishes in-memory cache hits ($p_{50} < 1\text{ms}$) from live upstream WAN round-trips with real-time financial USD token savings telemetry.
+
+#### 2. [Aegis-Copilot](https://github.com/mihulbairagi/aegis-enterprise-copilot) — Enterprise Operations Platform with RLS & Circuit Breakers
+> **FastAPI · DuckDB OLAP · PyJWT HS256 · Chained SQLite Ledger · 19/19 Tests Passing**
+* **RLS Pre-Filtering:** Row-level security clearance tiers (`INTERN`, `ANALYST`, `EXECUTIVE`) enforced at database query planner layer—unauthorized tokens NEVER enter LLM context.
+* **Data Quality Circuit Breaker:** Automated 3-state ingestion gate isolating dirty batches (>15% null rate or domain anomalies) into an encrypted Dead-Letter Queue (DLQ).
+* **Cryptographic Tamper-Proof Audit:** Immutable operational ledger linked with SHA-256 Merkle-style hash chaining and distributed idempotency keys.
+
+#### 3. [CP Tutor Agent](https://github.com/mihulbairagi/cp_tutor_agent) — Multi-Agent Competitive Programming Coach
 > **FastAPI · LangGraph · ChromaDB · SQLite TTL Cache · Pytest Suite (200+ tests)**
 * **Architecture:** Multi-agent state graph that parses live Codeforces and LeetCode histories, normalizes cross-platform tag taxonomies, and diagnoses user weaknesses.
 * **Deterministic Weakness Arithmetic:** Weakness scoring decomposes into 4 mathematical signals (`coverage`, `staleness`, `difficulty`, `struggle`) with sample-size confidence damping.
 * **Zero-Waste Ingestion:** Dual-TTL caching (1h user history, 24h problemset catalog) with SHA-256 request hashing, exponential retry backoff, and local zero-cost embedding search.
 * **Testability:** 207 unit tests with zero network calls + 15 end-to-end behavioral eval gates.
 
-#### 2. [CareerGraph](https://github.com/mihulbairagi/CareerGraph) — Enterprise Multi-Agent Grounded RAG
+#### 4. [CareerGraph](https://github.com/mihulbairagi/CareerGraph) — Enterprise Multi-Agent Grounded RAG
 > **FastAPI · LangGraph · ChromaDB · Claude Sonnet · Pydantic v2**
 * **Strict Grounding Floors:** Discards chunks below cosine similarity floor (`0.25`). Skips LLM calls entirely when ungrounded, returning verified citations.
 * **Multi-Agent Routing:** Classifies recruiter questions into specialized nodes (`Resume QA` vs `JD Matcher` for skill gap and ATS analysis) with deterministic fallback.
 * **Production Lifespan Engine:** Singleton startup composition root prevents reloading 90MB embeddings on requests.
 
-#### 3. [ClashCode](https://github.com/mihulbairagi/ClashCode) — Distributed Real-Time Online Judge
+#### 5. [ClashCode](https://github.com/mihulbairagi/ClashCode) — Distributed Real-Time Online Judge
 > **Node.js · Express · MongoDB · React · Monaco Editor · Socket.io · Wandbox API**
 * Full-stack code execution engine supporting multiple languages with isolated remote compilation.
 * Asynchronous judging queue with live bi-directional Socket.io room streaming (`Queued -> Judging -> Verdict`).
